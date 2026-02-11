@@ -1,0 +1,167 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.auth-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 18px; 
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+
+.auth-btn:hover {
+  background-color: #0056b3;
+}
+
+.switch-auth  {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 18px;
+   text-decoration: none;
+   font-weight: 550;
+}
+
+.switch-auth a {
+   text-decoration: none;
+}
+
+
+
+
+.error-msg {
+  color: #d9534f;
+  background: #fdf7f7;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 60px;
+}
+
+.show-btn {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #4f46e5;
+  font-weight: 500;
+}
+/* ================= Tablet View ================= */
+@media (max-width: 992px) {
+  .auth-card {
+    padding: 2rem;
+    max-width: 380px;
+  }
+
+  .form-group label {
+    font-size: 18px;
+  }
+
+  .form-group input {
+    font-size: 16px;
+  }
+
+  .auth-btn {
+    font-size: 16px;
+  }
+
+  .switch-auth {
+    font-size: 16px;
+  }
+}
+
+
+/* ================= Mobile View ================= */
+@media (max-width: 600px) {
+
+  .auth-wrapper {
+    min-height: 100vh;
+    padding: 10px;
+  }
+
+  .auth-card {
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 100%;
+  }
+
+  .auth-card h2 {
+    font-size: 22px;
+  }
+
+  .form-group label {
+    font-size: 16px;
+  }
+
+  .form-group input {
+    padding: 0.65rem;
+    font-size: 15px;
+  }
+
+  .auth-btn {
+    padding: 0.65rem;
+    font-size: 15px;
+  }
+
+  .switch-auth {
+    font-size: 15px;
+  }
+
+  .show-btn {
+    font-size: 13px;
+    right: 8px;
+  }
+}

@@ -1,0 +1,171 @@
+.navbar {
+  background: linear-gradient(to bottom right, #00C0FF, #4218B8);
+  padding: 6px 25px;
+  color: white;         
+  margin: 20px auto;  
+  margin-top: 0px;
+}
+
+/* Top Row */
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a {
+  text-decoration: none;   /* underline remove */
+  color: white;            /* text white */
+  font-weight: bold;       /* bold text */
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+.logout {
+  margin-top: 15px;
+  padding: 10px 14px;   /* Proper spacing */
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  width: fit-content;   /* Sirf text jitna */
+  align-self: flex-start; /* Left align inside flex column */
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.logout:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+/* ================= DESKTOP FIX ================= */
+
+/* Desktop view only */
+@media (min-width: 769px) {
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: auto;   /* 🔥 THIS pushes menu to right */
+  }
+
+  
+}
+
+/* ================= HAMBURGER ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================= PROFILE ================= */
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to bottom right, #2fff44, #f3016e);;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  color: black;
+  padding: 12px;
+  width: 180px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+    padding: 20px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .nav-logo a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+}
